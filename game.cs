@@ -146,19 +146,22 @@ namespace Template
                         screen.pixels[ pixelIdx ] = RTTools.Vector3ToIntegerRGB( scale * accumulator[ pixelIdx ] );
                     }
                     );
-                //for ( int y = 0; y < screen.height; y++ )
-                //{
-                //    for ( int x = 0; x < screen.width; x++ )
-                //    {
-                //        // generate primary ray
-                //        Ray ray = camera.Generate( RTTools.GetRNG(), x, y );
-                //        // trace path
-                //        int pixelIdx = x + y * screen.width;
-                //        accumulator[ pixelIdx ] += Sample( ray, 0 );
-                //        // plot final color
-                //        screen.pixels[ pixelIdx ] = RTTools.Vector3ToIntegerRGB( scale * accumulator[ pixelIdx ] );
-                //    }
-                //}
+
+                /*
+                for ( int y = 0; y < screen.height; y++ )
+                {
+                    for ( int x = 0; x < screen.width; x++ )
+                    {
+                        // generate primary ray
+                        Ray ray = camera.Generate( RTTools.GetRNG(), x, y );
+                        // trace path
+                        int pixelIdx = x + y * screen.width;
+                        accumulator[ pixelIdx ] += Sample( ray, 0 );
+                        // plot final color
+                        screen.pixels[ pixelIdx ] = RTTools.Vector3ToIntegerRGB( scale * accumulator[ pixelIdx ] );
+                    }
+                }
+                */
             }
             // stop and report when max render time elapsed
             int elapsedSeconds = (int)(timer.ElapsedMilliseconds / 1000);
